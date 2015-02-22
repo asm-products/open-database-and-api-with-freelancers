@@ -1,2 +1,5 @@
 .c9/
 npm-debug.log
+.elasticbeanstalk/
+node_modules/
+.git/
