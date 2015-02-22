@@ -5,7 +5,8 @@
     "url": "git@github.com:asm-products/open-database-and-api-with-freelancers.git"
   },
   "scripts": {
-    "start": "node ./app/bin/www"
+    "start": "node ./app/bin/www",
+    "arch": "git archive --format=zip HEAD > app.zip"
   },
   "dependencies": {
     "body-parser": "^1.12.0",

@@ -3,3 +3,4 @@ npm-debug.log
 .elasticbeanstalk/
 node_modules/
 .git/
+app.zip
