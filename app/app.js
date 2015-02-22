@@ -6,10 +6,13 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+var cnf = require('./cnf');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
 app.use('/', routes);
 app.use('/users', users);
@@ -25,7 +28,7 @@ app.use(function(req, res, next) {
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
+if (cnf.APP_ENV === 'dev') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
         res.send({

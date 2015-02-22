@@ -5,7 +5,9 @@
     "url": "git@github.com:asm-products/open-database-and-api-with-freelancers.git"
   },
   "scripts": {
+    "prestart": "npm install",
     "start": "node ./app/bin/www",
+    "dev":  "APP_ENV=dev DDD_HOST=localhost DDD_DATABASE=appdb DDD_PASSWORD=1q2w DDD_PORT=5432 DDD_USER=postgres node ./app/bin/www",
     "arch": "git archive --format=zip HEAD > app.zip"
   },
   "dependencies": {
